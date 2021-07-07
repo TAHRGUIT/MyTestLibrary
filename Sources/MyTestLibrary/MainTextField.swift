@@ -1,23 +1,22 @@
 import SwiftUI
 
-public struct MyTestLibrary {
-    public struct mainTextField : View{
-        @State var placeholder : String
-        @Binding var text : String
+    public struct MainTextField : View{
+        @State var text : String = ""
+        var configHelper : ConfigHelper
         
-        public init(placeholder: String, text: Binding<String>){
-            self._placeholder = State(initialValue: placeholder)
-            self._text = text
+        public init(configHelper: ConfigHelper){
+            self.configHelper = configHelper
         }
         
         public var body: some View{
             HStack{
                 Image(systemName: "person").foregroundColor(Color.red)
-                TextField(placeholder, text: $text)
+                Text(configHelper.appName!)
+                TextField(configHelper.appName!, text: $text)
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(Color.red)
             }.padding()
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.red, lineWidth: 2))
         }
     }
-}
+

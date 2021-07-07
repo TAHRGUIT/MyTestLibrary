@@ -17,7 +17,8 @@
                     VStack{
                         Text("First Name")
                             .frame(width: UIScreen.main.bounds.width, alignment: .leading)
-                        MyTestLibrary.mainTextField(placeholder : "Testing", text: $fname)
+                       
+                            MainTextField(placeholder : "Testing", text: $fname)
                         
                         Button("Ok"){
                             
