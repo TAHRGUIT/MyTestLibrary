@@ -12,4 +12,6 @@ public struct ConfigHelper {
     public var appName : String?
     public var appColor : String?
     public var lname : String?
+    
+    public init() {}
 }
