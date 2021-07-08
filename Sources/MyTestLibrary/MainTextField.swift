@@ -10,11 +10,12 @@ import SwiftUI
         
         public var body: some View{
             ZStack{
-                Color(UIColor.init(hex: configHelper.appColor!)!)
+//               configHelper.appColor
+                Color.init(hex: configHelper.appColor!)
                     .edgesIgnoringSafeArea(.all)
                 VStack{
                     Image(systemName: "person").foregroundColor(Color.red)
-                    Text(configHelper.appColor!)
+                    //Text(configHelper.appColor)
                     TextField(configHelper.appName!, text: $text)
                         .font(.system(size: 20, weight: .bold, design: .default))
                         .foregroundColor(Color.red)
