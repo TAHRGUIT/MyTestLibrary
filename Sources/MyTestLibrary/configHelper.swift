@@ -12,6 +12,11 @@ public struct ConfigHelper {
     
     public var appName : String?
     public var appColor : String?
+    
+    public var email : String?
+    public var password : String?
+    
+    public var fname : String?
     public var lname : String?
     
     public init() {}

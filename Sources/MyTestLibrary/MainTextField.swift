@@ -1,11 +1,15 @@
 import SwiftUI
 
     public struct MainTextField : View{
+        @ObservedObject var configHE = ConfigHelperEnvirenment()
+
+        
         @State var text : String = ""
         public var configHelper : ConfigHelper
         
         public init(configHelper: ConfigHelper){
             self.configHelper = configHelper
+            configHE.configHelper = configHelper
         }
         
         public var body: some View{
